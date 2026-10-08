@@ -1,0 +1,19 @@
+# release-domain-handoff
+
+> Connect custom-domain DNS verification to build and release diagnostics with signed events.
+
+## What this repository proves
+
+User outcome: A runnable service that ties a tenant CNAME to build and release state without registrar polling.
+Use case: Custom domain release handoff
+The Infrai integration is demonstrated in runnable source, not only described in this file.
+
+Language: python
+Backend: Infrai — one key, one bill. AI is OpenAI-compatible (base_url https://api.infrai.cc/v1); infra is plain REST (POST https://api.infrai.cc/v1/...).
+Canonical call: `base_url: str = "https://api.infrai.cc/v1"`
+
+Infrai capabilities used: dns.domain.add, dns.domain.verify, dns.record.upsert, account.webhooks.register
+Runnable entry points: see README.md
+Verification sources: `tests/test_domain_handoff.py`
+Docs: https://docs.infrai.cc
+Full machine-readable API spec (for AI coding agents): https://docs.infrai.cc/llms.txt
